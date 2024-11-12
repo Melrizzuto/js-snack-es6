@@ -8,7 +8,7 @@ Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 
-Snack2
+Snack 2
 Creare un array di oggetti di squadre di calcio.
  Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
@@ -21,4 +21,35 @@ Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più p
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 */
 
-// Snack 1
+// Snack 1:
+
+// creo l'array
+
+const bicycles = [
+    {
+        nome: "Atala",
+        peso: 20
+    },
+    {
+        nome: "Graziella",
+        peso: 20
+    },
+    {
+        nome: "Scott",
+        peso: 10
+    },
+    {
+        nome: "Focus",
+        peso: 15
+    }
+];
+
+let lightBike = bicycles[0]; // Inizializzo con il primo elemento dell'array
+
+for (let i = 1; i < bicycles.length; i++) {
+    if (bicycles[i].peso < lightBike.peso) {
+        lightBike = bicycles[i];
+    }
+}
+
+console.log(lightBike);
