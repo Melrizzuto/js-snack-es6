@@ -32,7 +32,7 @@ const bicycles = [
     },
     {
         nome: "Graziella",
-        peso: 20
+        peso: 30
     },
     {
         nome: "Scott",
@@ -53,3 +53,49 @@ for (let i = 1; i < bicycles.length; i++) {
 }
 
 console.log(lightBike);
+
+// Snack 2:
+
+const teams = [
+    {
+        teamName: "Juventus",
+        points: 0,
+        fouls: 0,
+    },
+    {
+        teamName: "Inter",
+        points: 0,
+        fouls: 0,
+    },
+    {
+        teamName: "Milan",
+        points: 0,
+        fouls: 0,
+    },
+    {
+        teamName: "Real Madrid",
+        points: 0,
+        fouls: 0,
+    }
+];
+
+
+// Generazione di points e fouls casuali
+teams.forEach(function(team) {
+    team.points = getRandomNumber(1, 50);
+    team.fouls = getRandomNumber(1, 50);
+});
+
+// Stampa dell'array modificato con points e fouls
+console.log(teams);
+
+// Creo un nuovo array con solo nomi e falli subiti
+const teamsFouls = teams.map(function(team) {
+    return {
+        teamName: team.teamName,
+        fouls: team.fouls
+    };
+});
+
+// Stampa del nuovo array con nomi e falli subiti
+console.log(teamsFouls);
