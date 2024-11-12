@@ -99,3 +99,18 @@ const teamsFouls = teams.map(function(team) {
 
 // Stampa del nuovo array con nomi e falli subiti
 console.log(teamsFouls);
+
+// Snack 3:
+
+let numbers = [1, 2, 3, 4, 5, 6];
+let a = 1;
+let b = 6;
+
+const getNumbers = function(array, a, b) {
+    // Verifico che a sia minore di b e che siano entro i limiti dell'array
+    if (a < b && b <= array.length) {
+        return array.slice(a, b -1);
+    }
+}
+// Stampa del nuovo array con i numeri compresi tra quelli scelti
+console.log(getNumbers(numbers, a, b));
